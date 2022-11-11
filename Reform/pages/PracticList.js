@@ -4,8 +4,6 @@ import { gStyle } from "../Styles";
 
 export default function PractList ({navigation}) {
     const bgImage = require('../images/image104.png')
-    const breath = require('../images/breath.png')
-    const meditatio = require('../images/meditatio.png')
     const prof = require("../images/profile.png")
     const list = require("../images/listscreen.png")
     const home = require("../images/krug.png")
@@ -15,6 +13,12 @@ export default function PractList ({navigation}) {
     const bgTime = require('../images/scrollimages/bgForTime.png')
     const apple = require('../images/scrollimages/apple.png')
     const star = require('../images/scrollimages/star.png')
+    const bgBreath = require('../images/scrollimages/bgBreath.png')
+    const bgMedtatio = require('../images/scrollimages/bgMedtatio.png')
+    const breathtxt = require('../images/scrollimages/breathtxt.png')
+    const meditatiotxt = require('../images/scrollimages/meditatiotxt.png')
+    const med_icn = require('../images/scrollimages/med_icn.png')
+    const brth_icn = require('../images/scrollimages/brth_icn.png')
     
     const loadset = () => {
         navigation.navigate('Settings')
@@ -28,7 +32,24 @@ export default function PractList ({navigation}) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground source={bgImage} style = {gStyle.image}>  
+      <ImageBackground source={bgImage} style = {gStyle.image}> 
+        <View>    
+          <TouchableOpacity style = {{zIndex:1, marginStart: 177, marginTop:27, height: 153, width:160}}>
+            <View style = {{height: 153, width:160}}>
+              <Image source={bgBreath}/>
+              <Text style = {{fontSize:20, color:'black', position:'absolute', marginStart:40, marginTop:10}}>Дыхание</Text>
+              <Image source={brth_icn} style = {{position:"absolute", marginStart:39, marginTop:45}}/>
+             </View>
+          </TouchableOpacity>
+
+                <TouchableOpacity  style = {{zIndex:2, marginTop:-60, marginBottom: 20, marginStart:27 ,height:205, width:213}}>
+                <View style = {{height:205, width:213}}>
+                  <Image source={bgMedtatio}/>
+                  <Image source={med_icn} style = {{position:"absolute", marginStart:52.94, marginTop:68}}/>
+                  <Text style = {{fontSize:20, color:'black', position:'absolute', marginStart:52, marginTop:20}}>Медитация</Text>
+                  </View>
+                </TouchableOpacity>
+        </View>
             <ScrollView style={styles.scrollView}>
 
             <View>
@@ -37,13 +58,14 @@ export default function PractList ({navigation}) {
               </TouchableOpacity>
             </View>
 
+
             <View>
               <TouchableOpacity>
                     <Image source={bgImageForScrollButtons} style ={{marginHorizontal:12, marginTop:24}}/>
                     <Image source={bgTime} style = {{position:"absolute", left: 254, marginTop:24}}/>
                     <Image source={apple} style = {{position:"absolute", marginLeft:268, marginTop:76}}/>
-                    <Text style = {{position:"absolute", marginTop:76, marginLeft:32, color:'black',fontSize:20}}>Яблоневый сад</Text>
-                    <Text style = {{position:"absolute", marginTop:27, marginLeft:272, color:'white',fontSize:12}}>4 мин</Text>
+                    <Text style = {{position:"absolute", marginTop:76, marginLeft:32, color:'black', fontSize:20 }}>Яблоневый сад</Text>
+                    <Text style = {{position:"absolute", marginTop:27, marginLeft:272, color:'white', fontSize:12}}>4 мин</Text>
               </TouchableOpacity>
             </View>
             
@@ -52,8 +74,8 @@ export default function PractList ({navigation}) {
                     <Image source={bgImageForScrollButtons} style ={{marginHorizontal:12, marginTop:24}}/>
                     <Image source={bgTime} style = {{position:"absolute", left: 254, marginTop:24}}/>
                     <Image source={star} style = {{position:"absolute", marginLeft:268, marginTop:76}}/>
-                    <Text style = {{position:"absolute", marginTop:76, marginLeft:32, color:'black',fontSize:20}}>Полет к звездам</Text>
-                    <Text style = {{position:"absolute", marginTop:27, marginLeft:272, color:'white',fontSize:12}}>4 мин</Text>
+                    <Text style = {{position:"absolute", marginTop:76, marginLeft:32, color:'black', fontSize:20}}>Полет к звездам</Text>
+                    <Text style = {{position:"absolute", marginTop:27, marginLeft:272, color:'white', fontSize:12}}>4 мин</Text>
               </TouchableOpacity>
             </View>
 
@@ -90,10 +112,9 @@ const styles = StyleSheet.create({
   scrollView: {
     marginLeft: 24,
     marginRight: 26,
-    marginTop: 339,
+    marginTop: 12,
   },
   text: {
     fontSize: 42,
   },
 });
-
