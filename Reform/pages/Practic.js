@@ -34,7 +34,7 @@ export default function Practic({ navigation }){
                     <Image source={breath}/>
                 </TouchableOpacity>
             
-                <TouchableOpacity style = {{position: "absolute", left: 189, top: 348}} >
+                <TouchableOpacity style = {{position: "absolute", left: 209, top: 348}} >
                     <Image source={meditatio}/>
                 </TouchableOpacity>
 
