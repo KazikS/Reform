@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, SafeAreaView, ImageBackground, Image, TouchableOpacity, TextInput } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import { gStyle } from "../Styles";
 
 export default function Practic({ navigation }){
@@ -14,6 +15,10 @@ export default function Practic({ navigation }){
     const loadmain = () => {
         navigation.navigate('Main')
     }
+    const loadprlist = () => {
+        navigation.navigate('PracticList')
+    }
+
 
     const bgImage = require('../images/image104.png')
     const breath = require('../images/breath.png')
@@ -30,11 +35,11 @@ export default function Practic({ navigation }){
                 
                 <Text style = {gStyle.choose}>Выберите практику</Text>
                 
-                <TouchableOpacity style = {{position: "absolute", left: 32, top: 348}} >
+                <TouchableOpacity style = {{position: "absolute", left: 32, top: 348}} onPress = {loadprlist} >
                     <Image source={breath}/>
                 </TouchableOpacity>
             
-                <TouchableOpacity style = {{position: "absolute", left: 209, top: 348}} >
+                <TouchableOpacity style = {{position: "absolute", left: 209, top: 348}} onPress = {loadprlist} >
                     <Image source={meditatio}/>
                 </TouchableOpacity>
 

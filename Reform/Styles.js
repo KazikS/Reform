@@ -344,4 +344,19 @@ choose: {
     lineHeight: 44,
     color: "#000000"
     },
+
+
+
+    //prList
+scroll: {
+    left: 150,
+    top: 50,
+    },
+
+view1:{
+    zIndex: 1,
+},
+view2:{
+    zIndex: 2,
+},
 })

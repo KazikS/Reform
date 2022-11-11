@@ -7,6 +7,7 @@ import Profile from "./pages/Profile";
 import Music from "./pages/Music";
 import Example from "./pages/Example";
 import Practic from "./pages/Practic";
+import PractList from "./pages/PracticList";
 
 const Stack = createStackNavigator();
 
@@ -34,21 +35,26 @@ export default function Navigate(){
             <Stack.Screen 
             name = "Music"
             component = {Music}
-            options = {{title: "Профиль", headerStyle: { height: 0 }, headerLeft: ()=> null,}}
+            options = {{ headerStyle: { height: 0 }, headerLeft: ()=> null,}}
             />
 
             <Stack.Screen 
             name = "Example"
             component = {Example}
-            options = {{title: "Профиль", headerStyle: { height: 0 }, headerLeft: ()=> null,}}
+            options = {{ headerStyle: { height: 0 }, headerLeft: ()=> null,}}
             />
 
             <Stack.Screen 
             name = "Practic"
             component = {Practic}
-            options = {{title: "Профиль", headerStyle: { height: 0 }, headerLeft: ()=> null,}}
+            options = {{ headerStyle: { height: 0 }, headerLeft: ()=> null,}}
             />
 
+            <Stack.Screen 
+            name = "PracticList"
+            component = {PractList}
+            options = {{ headerStyle: { height: 0 }, headerLeft: ()=> null,}}
+            />
         </Stack.Navigator>
     </NavigationContainer>;
 }
